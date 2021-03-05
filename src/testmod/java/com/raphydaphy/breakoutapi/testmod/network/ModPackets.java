@@ -1,4 +1,4 @@
-package com.raphydaphy.breakoutapi.network;
+package com.raphydaphy.breakoutapi.testmod.network;
 
 import com.raphydaphy.breakoutapi.BreakoutAPI;
 import net.minecraft.util.Identifier;

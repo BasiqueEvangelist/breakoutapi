@@ -1,4 +1,4 @@
-package com.raphydaphy.breakoutapi.demo.gui;
+package com.raphydaphy.breakoutapi.testmod.demo.gui;
 
 import com.raphydaphy.breakoutapi.breakout.GUIBreakout;
 import com.raphydaphy.breakoutapi.breakout.window.BreakoutWindow;

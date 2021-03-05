@@ -1,11 +1,9 @@
-package com.raphydaphy.breakoutapi.demo.integrated;
+package com.raphydaphy.breakoutapi.testmod.demo.integrated;
 
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.raphydaphy.breakoutapi.BreakoutAPI;
-import com.raphydaphy.breakoutapi.breakout.AbstractBreakout;
 import com.raphydaphy.breakoutapi.breakout.Breakout;
 import com.raphydaphy.breakoutapi.breakout.window.BreakoutWindow;
-import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.LiteralText;

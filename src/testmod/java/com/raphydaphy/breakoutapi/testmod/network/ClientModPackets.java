@@ -1,9 +1,9 @@
-package com.raphydaphy.breakoutapi.network;
+package com.raphydaphy.breakoutapi.testmod.network;
 
 import com.raphydaphy.breakoutapi.BreakoutAPI;
 import com.raphydaphy.breakoutapi.BreakoutAPIClient;
-import com.raphydaphy.breakoutapi.demo.gui.DemoGUIBreakout;
-import com.raphydaphy.breakoutapi.demo.integrated.DemoIntegratedBreakout;
+import com.raphydaphy.breakoutapi.testmod.demo.gui.DemoGUIBreakout;
+import com.raphydaphy.breakoutapi.testmod.demo.integrated.DemoIntegratedBreakout;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.minecraft.util.Identifier;
 

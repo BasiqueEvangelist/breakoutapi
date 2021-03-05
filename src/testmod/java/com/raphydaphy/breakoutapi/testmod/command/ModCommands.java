@@ -1,13 +1,13 @@
-package com.raphydaphy.breakoutapi.command;
-
-import static net.minecraft.server.command.CommandManager.*;
+package com.raphydaphy.breakoutapi.testmod.command;
 
 import com.raphydaphy.breakoutapi.BreakoutAPI;
-import com.raphydaphy.breakoutapi.network.ModPackets;
+import com.raphydaphy.breakoutapi.testmod.network.ModPackets;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.server.network.ServerPlayerEntity;
+
+import static net.minecraft.server.command.CommandManager.literal;
 
 public class ModCommands {
   public static void register() {

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "breakoutapi-testmod",
+  "name": "Breakout API (Test Mod)",
+  "version": "${version}",
+
+  "description": "Escape the confindments of society by creating new windows (Test Mod)",
+  "authors": [
+    "raphydaphy"
+  ],
+  "contact": {
+    "homepage": "https://github.com/raphydaphy/breakoutapi",
+    "sources": "https://github.com/raphydaphy/breakoutapi"
+  },
+
+  "license": "MIT",
+  "icon": "assets/breakoutapi/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.raphydaphy.breakoutapi.testmod.BreakoutAPITest"
+    ],
+    "client": [
+      "com.raphydaphy.breakoutapi.testmod.BreakoutAPITestClient"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "*",
+    "breakoutapi": "*"
+  }
+}

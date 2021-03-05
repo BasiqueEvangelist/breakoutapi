@@ -1,18 +1,14 @@
-package com.raphydaphy.breakoutapi.demo.gui;
+package com.raphydaphy.breakoutapi.testmod.demo.gui;
 
 import net.minecraft.util.Identifier;
 import org.liquidengine.legui.component.*;
 import org.liquidengine.legui.component.optional.TextState;
 import org.liquidengine.legui.component.optional.align.HorizontalAlign;
 import org.liquidengine.legui.component.optional.align.VerticalAlign;
-import org.liquidengine.legui.event.MouseClickEvent;
 import org.liquidengine.legui.image.loader.ImageLoader;
 import org.liquidengine.legui.style.Style;
 import org.liquidengine.legui.style.flex.FlexStyle;
 import org.liquidengine.legui.style.font.FontRegistry;
-import org.liquidengine.legui.system.context.Context;
-import org.liquidengine.legui.system.renderer.nvg.NvgRenderer;
-import org.lwjgl.glfw.GLFW;
 
 public class DemoPanel extends Panel {
 

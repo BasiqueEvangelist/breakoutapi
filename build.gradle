@@ -17,6 +17,21 @@ repositories {
 	maven {url "https://raw.github.com/SpinyOwl/repo/releases"}
 }
 
+sourceSets {
+	testmod {
+		compileClasspath += main.compileClasspath
+		runtimeClasspath += main.runtimeClasspath
+	}
+}
+
+runClient {
+	classpath(sourceSets.testmod.runtimeClasspath)
+}
+
+runServer {
+	classpath(sourceSets.testmod.runtimeClasspath)
+}
+
 dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
@@ -38,6 +53,8 @@ dependencies {
 	runtimeOnly "org.lwjgl:lwjgl-yoga:${project.lwjgl_version}:natives-windows"
 	runtimeOnly "org.lwjgl:lwjgl-yoga:${project.lwjgl_version}:natives-linux"
 	runtimeOnly "org.lwjgl:lwjgl-yoga:${project.lwjgl_version}:natives-macos"
+
+	testmodImplementation sourceSets.main.output
 }
 
 shadowJar {
