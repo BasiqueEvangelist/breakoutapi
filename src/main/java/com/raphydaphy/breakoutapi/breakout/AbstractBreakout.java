@@ -9,6 +9,8 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gl.Framebuffer;
 import net.minecraft.util.Identifier;
 import org.lwjgl.glfw.GLFW;
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.opengl.GL21;
 import org.lwjgl.opengl.GL30;
 import org.lwjgl.opengl.GL45;
 
@@ -17,11 +19,14 @@ public abstract class AbstractBreakout {
   protected BreakoutWindow window;
   protected Framebuffer framebuffer;
   protected MinecraftClient client;
+  protected BreakoutGlState glState;
 
   public AbstractBreakout(Identifier identifier, BreakoutWindow window) {
     this.identifier = identifier;
     this.window = window;
     this.client = MinecraftClient.getInstance();
+    this.glState = new BreakoutGlState();
+    this.glState.record();
 
     this.framebuffer = new Framebuffer(this.window.getFramebufferWidth(), this.window.getFramebufferHeight(), true, MinecraftClient.IS_SYSTEM_MAC);
     this.framebuffer.setClearColor(0.0F, 0.0F, 0.0F, 0.0F);
@@ -39,6 +44,7 @@ public abstract class AbstractBreakout {
     if (this.window.shouldClose()) return;
 
     GLFW.glfwMakeContextCurrent(this.window.getHandle());
+    glState.apply();
 
     RenderSystem.pushMatrix();
     RenderSystem.clear(GL30.GL_COLOR_BUFFER_BIT | GL30.GL_DEPTH_BUFFER_BIT, MinecraftClient.IS_SYSTEM_MAC);
@@ -59,6 +65,8 @@ public abstract class AbstractBreakout {
     this.window.swapBuffers();
 
     this.postRender();
+
+    glState.record();
 
   }
 
